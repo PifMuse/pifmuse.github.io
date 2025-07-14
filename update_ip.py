@@ -4,7 +4,7 @@ import os
 
 def get_public_ip():
     try:
-        response = requests.get("https://api.ipify.org?format=json", timeout=5)
+        response = requests.get("https://ifconfig.me/ip", timeout=5)
         return response.json()["ip"]
     except Exception as e:
         print(f"获取IP失败: {e}")

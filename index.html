@@ -9,19 +9,6 @@
     <div id="ip">166.111.58.159</div>
     <p>更新时间：<span id="time">2025-07-14 15:21:25</span></p>
 
-    <script>
-        // 从后端API获取IP（实际项目中由GitHub Actions更新）
-        async function loadIP() {
-            try {
-                const response = await fetch("https://api.ipify.org?format=json");
-                const data = await response.json();
-                document.getElementById("ip").innerText = data.ip;
-                document.getElementById("time").innerText = new Date().toLocaleString();
-            } catch (error) {
-                document.getElementById("ip").innerText = "获取IP失败";
-            }
-        }
-        window.onload = loadIP;
-    </script>
+
 </body>
 </html>
